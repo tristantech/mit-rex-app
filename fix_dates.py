@@ -11,8 +11,8 @@ dates_with_events = set()
 
 for event in data:
 	# Append UTC time offset to all times to make it a valid ISO date
-	event["starttime"] += "-0400"
-	event["endtime"] += "-0400"
+	event["starttime"] += "-04:00"
+	event["endtime"] += "-04:00"
 	
 	d = datetime.datetime.strptime(event["starttime"].split("T")[0], "%Y-%m-%d")
 	if d not in dates_with_events:
