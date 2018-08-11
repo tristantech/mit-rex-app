@@ -384,7 +384,7 @@ var App = {
 	
 	printEvent	:	function(event) {
 		
-		if(event.hasTag("dontprint") || event.hasTag("tour")) return;
+		if(event.hasTag("dontprint")) return;
 		
 		var hilite = event.hasTag("housing") || event.hasTag("large") || event.hasTag("nooverlap");
 		
