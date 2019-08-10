@@ -2,6 +2,7 @@ import argparse
 import datetime
 import json
 import logging
+import os.path
 import pytz
 import requests
 import socket
@@ -64,13 +65,14 @@ def __main__():
             )
             try:
                 with open(path, "w") as f:
-                    f.write(req.content)
+                    f.write(req.content.decode("utf-8"))
                 log.info("Wrote malformed file to {}".format(path))
             except Exception as err:
                 log.error("Could not save copy of malformed JSON file at {}: {}".format (
                     path,
                     str(err)
                 ))
+        exit(1)
 
     log.info("JSON file contains {} events".format(len(json_data)))
 
