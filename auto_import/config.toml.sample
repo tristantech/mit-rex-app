@@ -1,0 +1,14 @@
+# Dormcon-provided API endpoint for getting data
+dormcon_url = "https://blah/"
+
+# Client certificate for pulling dormcon data
+certificate_path = "mycert.pem"
+
+# Place to write JSON to. Should be in web space.
+web_path = "./webroot/events.json"
+
+# Timezone the events JSON file uses (so we can convert to UTC)
+timezone = "America/New_York"
+
+# Optional - aborts if fewer than this many events are read
+min_events = 50

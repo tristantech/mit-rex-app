@@ -1,15 +1,15 @@
 <html class="initialPage">
 <head>
 	<title>Guide to REX</title>
-	
+
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	
+
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	<script src="events.js"></script>
-	
+
 	<!--
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,9 +21,9 @@
 		ga('send', 'pageview');
 	</script>
 	-->
-	
+
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
-	
+
 	<style type="text/css">
 		#options{
 			padding: 25px;
@@ -52,15 +52,15 @@
 			padding:2px;
 			border-radius: 3px;
 		}
-		
+
 		.upcoming {
 			background-color: green; color: lightgreen; border: thin solid lightgreen;
 		}
-		
+
 		.inprog {
 			background-color: yellow; color: orange; border: thin solid orange;
 		}
-		
+
 		.over {
 			background-color: red; color: pink; border: thin solid pink;
 		}
@@ -74,13 +74,16 @@
 				text-align:center;
 			}
 		}
+		.time-warning {
+			color: #999;
+			text-align: center;
+			font-size: 11px;
+			padding-top:4px;
+		}
 	</style>
-	
+
 </head>
 <body>
-
-	
-
 	<div id="topBar" style="width:100%;background-color:#f9f9f9;border-bottom: solid 1px #bbb;position:fixed;z-index:100;">
 		<p style="text-align:center;width:100%;margin-top:15px;">Dormcon Guide to REX</p>
 		<img id="backBtn" src="close.png" style="display:none;width:40px;height:40px;float:right;margin-top:-46px;margin-right:10px;" onclick="App.toggleSearch();" />
@@ -91,7 +94,7 @@
 		//Timezone minder
 		var offset = new Date().getTimezoneOffset();
 		if(offset != 240) {
-			document.write("<strong style='color:red;text-align:center;'>Your browser is not set for Eastern Daylight Time. The event times below will be shifted.</strong>");
+			document.write("<strong style='color:red;text-align:center;'>Your device is not set for Eastern Daylight Time. The event times below will be shifted.</strong>");
 		}
 	</script>
 	<div id="options" style="display:none;" class="hidden">
@@ -137,16 +140,18 @@
 			</div>
 		</div>
 	</div>
-	
-	<div>&nbsp;</div>
-	
+
+	<div class="time-warning">
+		Please note: if the print and online booklets disagree, the online booklet has the more up-to-date information.
+	</div>
+
 	<div id="currentList" data-role="collapsible-set" data-content-theme="d">
 	</div>
-	
-	<div id="footer" style="text-align:center;font-size:12px;font-style:oblique;">
+
+	<div id="footer" style="text-align:center;font-size:12px;font-style:oblique;color:#666;">
 		<p>Developed by Tristan Honscheid and Andrew Bartow</p>
 		<p>Data &copy; Copyright MIT Dormitory Council. All other rights reserved.</p>
 	</div>
-	
+
 </body>
 </html>
