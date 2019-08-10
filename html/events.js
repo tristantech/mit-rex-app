@@ -1,7 +1,7 @@
 /* This mostly just manages the localStorage and AJAX, and then wraps it in HTML to pass off to the
 jQuery mobile listview. */
 
-var JSON_URL = "corrected_rex2018.json"
+var JSON_URL = "events.json"
 
 var searchHidden = true;
 var eventsJSON = Array();
