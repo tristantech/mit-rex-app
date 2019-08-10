@@ -1,0 +1,18 @@
+# Don't track Dormcon JSON objects
+*.json
+
+# Python
+*.pyc
+env/*
+
+# Configuration files
+*.toml
+
+# Certs
+*.pem
+*.p12
+*.cer
+*.key
+
+# Test directories
+webroot/*
